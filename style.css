@@ -207,6 +207,12 @@ main.shell { padding-top: 8px; padding-bottom: 8px; }
 .pub-title a { color: var(--ink); border-bottom: 1px solid var(--rule); }
 .pub-title a:hover { color: var(--sea); border-bottom-color: var(--sea); }
 
+.pub-meta {
+  margin: 0 0 4px;
+  font-size: .9rem;
+  color: var(--slate);
+}
+
 .pub-venue {
   margin: 0;
   font-family: var(--mono);
@@ -214,6 +220,52 @@ main.shell { padding-top: 8px; padding-bottom: 8px; }
   letter-spacing: .12em;
   text-transform: uppercase;
   color: var(--slate);
+}
+
+/* research strands */
+
+.strands { margin: 0; max-width: 62ch; }
+
+.strands dt {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 1.1rem;
+  margin: 0 0 4px;
+}
+
+.strands dt + dd { margin: 0 0 22px; }
+.strands dd:last-child { margin-bottom: 0; }
+
+.funder {
+  display: block;
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--ochre);
+  margin-top: 3px;
+}
+
+.topics { margin: 0; padding: 0; list-style: none; max-width: 62ch; counter-reset: topic; }
+
+.topics li {
+  position: relative;
+  padding: 8px 0 8px 30px;
+  border-bottom: 1px solid var(--rule);
+  counter-increment: topic;
+}
+
+.topics li:last-child { border-bottom: 0; }
+
+.topics li::before {
+  content: counter(topic, decimal-leading-zero);
+  position: absolute;
+  left: 0;
+  top: 10px;
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--ochre);
 }
 
 /* ---------- footer ---------- */
